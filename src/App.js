@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+const myArray = [
+  'Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'
+];
+
+const renderItems = myArray.map(character=>{
+  return <li>{character}</li>
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>List of items from an array.</h1>
+      <ul>
+        {renderItems}
+      </ul>
+    </>
   );
 }
 
